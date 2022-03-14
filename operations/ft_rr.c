@@ -29,5 +29,5 @@ void	rr(t_stack *a, t_stack *b)
 	list_remove(b, b->first, free);
 	a->first = node_a;
 	b->first = node_b;
-	write(0, "rr\n", 3);
+	write(1, "rr\n", 3);
 }
