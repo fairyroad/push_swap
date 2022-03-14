@@ -19,5 +19,5 @@ void	sa(t_stack *a)
 	tmp = a->first->content;
 	a->first->content = a->first->next->content;
 	a->first->next->content = tmp;
-	write(0, "sa\n", 3);
+	write(1, "sa\n", 3);
 }
