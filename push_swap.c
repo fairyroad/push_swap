@@ -32,7 +32,7 @@ int	main(int argc, char **argv)
 		}
 	}
 	else
-		write(2,"ERROR\n",6);
+		write(1,"ERROR\n",6);
 	free(copy.v);
 	list_clear(a, free);
 	list_clear(b, free);
