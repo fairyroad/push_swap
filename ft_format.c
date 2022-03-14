@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void	normalize_stack(t_stack	*a)
+void	format_stack(t_stack	*a)
 {
 	t_node	*tmp;
 	t_tab	copy;
