@@ -18,7 +18,7 @@ int	main(int argc, char **argv)
 	t_stack		*b;
 	t_tab		*copy;
 
-	a = parse_arguments(argc, argv, a, b);
+	parse_arguments(argc, argv, a, b);
 	copy = convert_to_tab(a);
 	if (check_duplicates(copy))
 	{
