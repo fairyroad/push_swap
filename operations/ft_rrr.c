@@ -29,5 +29,5 @@ void	rrr(t_stack *a, t_stack *b)
 	node_b->next = NULL;
 	a->last = node_a;
 	b->last = node_b;
-	write(0, "rrr\n", 4);
+	write(1, "rrr\n", 4);
 }
