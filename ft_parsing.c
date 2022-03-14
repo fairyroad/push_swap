@@ -3,7 +3,7 @@
 static void	parse_array(t_stack *a, int argc, char **argv, int start)
 {
 	int     i;
-	int		*tmp;
+	int	tmp;
 
 	i = start;
 	while (i < argc)
@@ -13,8 +13,7 @@ static void	parse_array(t_stack *a, int argc, char **argv, int start)
 			write(1, "ERROR\n", 6);
 			exit(1);
 		}
-		tmp = malloc(sizeof(int));
-		*tmp = ft_atoi(argv[i]);
+		tmp = ft_atoi(argv[i]);
 		list_add_back(a, tmp);
 		i++;
 	}
