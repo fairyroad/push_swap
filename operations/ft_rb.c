@@ -22,5 +22,5 @@ void	rb(t_stack *b)
 	list_add_back(b, tmp);
 	list_remove(b, b->first, free);
 	b->first = node;
-	write(0, "rb\n", 3);
+	write(1, "rb\n", 3);
 }
