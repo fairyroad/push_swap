@@ -14,7 +14,7 @@ static void	parse_array(t_stack *a, int argc, char **argv, int start)
 			exit(1);
 		}
 		tmp = ft_atoi(argv[i]);
-		list_add_back(a, tmp);
+		list_add_last(a, tmp);
 		i++;
 	}
 }
