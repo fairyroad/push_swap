@@ -20,9 +20,9 @@ int	main(int argc, char **argv)
 
 	a = parse_arguments(argc, argv);
 	copy = convert_to_tab(a);
-	if (check_duplicates(&copy))
+	if (check_duplicates(copy))
 	{
-		if (!check_sorted(&copy))
+		if (!check_sorted(copy))
 		{
 			format_stack(a);
 			if (a->size > 5)
@@ -32,8 +32,8 @@ int	main(int argc, char **argv)
 		}
 	}
 	else
-		write(0,"ERROR\n",6);
-	free(copy);
+		write(2,"ERROR\n",6);
+	free(copy.v);
 	list_clear(a, free);
 	list_clear(b, free);
 	return (0);
