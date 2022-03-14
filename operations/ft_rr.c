@@ -23,8 +23,8 @@ void	rr(t_stack *a, t_stack *b)
 	tmp_b = b->first->content;
 	node_a = a->first->next;
 	node_b = b->first->next;
-	list_add_back(a, tmp_a);
-	list_add_back(b, tmp_b);
+	list_add_last(a, tmp_a);
+	list_add_last(b, tmp_b);
 	list_remove(a, a->first, free);
 	list_remove(b, b->first, free);
 	a->first = node_a;
