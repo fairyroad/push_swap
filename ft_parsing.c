@@ -10,7 +10,7 @@ static void	parse_array(t_stack *a, int argc, char **argv, int start)
 	{
 		if (!check_int(argv[i]))
 		{
-			write(0, "ERROR\n", 6);
+			write(1, "ERROR\n", 6);
 			exit(1);
 		}
 		tmp = malloc(sizeof(int));
