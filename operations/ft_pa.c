@@ -22,5 +22,5 @@ void	pa(t_stack *a, t_stack *b)
 	node = b->first->next;
 	list_remove(a, b->first, free);
 	b->first = node;
-	write(1, "pa\n", 1);
+	write(1, "pa\n", 3);
 }
