@@ -27,4 +27,10 @@ typedef struct s_stack
 	int		size;
 }	t_stack;
 
+typedef struct s_tab
+{
+	int		*v;
+	int		size;
+}	t_tab;
+
 #endif

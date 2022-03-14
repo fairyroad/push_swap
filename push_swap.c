@@ -14,8 +14,27 @@
 
 int	main(int argc, char **argv)
 {
-	t_stack		a;
-	t_stack		b;
+	t_stack		*a;
+	t_stack		*b;
+	t_tab		*copy;
 
+	a = parse_arguments(argc, argv);
+	copy = convert_to_tab(a);
+	if (check_duplicates(&copy))
+	{
+		if (!check_sorted(&copy))
+		{
+			normalize_stack(a);
+			if (a->size > 5)
+				sort_bigsize(a, b);
+			else
+				sort_smallsize(a, b);
+		}
+	}
+	else
+		write(0,"ERROR\n",6);
+	free(copy);
+	list_clear(a, free);
+	list_clear(b, free);
 	return (0);
 }
