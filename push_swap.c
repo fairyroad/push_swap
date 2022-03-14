@@ -20,7 +20,7 @@ int	main(int argc, char **argv)
 
 	parse_arguments(argc, argv, a, b);
 	copy = convert_to_tab(a);
-	if (check_duplicates(copy))
+	if (check_duplicate(copy))
 	{
 		if (!check_sorted(copy))
 		{
