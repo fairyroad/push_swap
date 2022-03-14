@@ -13,17 +13,24 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdarg.h>
+# include <fcntl.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+
 typedef struct s_node
 {
-	t_node	*prev;
-	t_node	*next;
+	struct s_node	*prev;
+	struct s_node	*next;
 	int		content;
 }	t_node;
 
 typedef struct s_stack
 {
-	t_node	*first;
-	t_node	*last;
+	struct s_node	*first;
+	struct s_node	*last;
 	int		size;
 }	t_stack;
 
