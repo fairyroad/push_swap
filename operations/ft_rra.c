@@ -22,5 +22,5 @@ void	rra(t_stack *a)
 	node = a->last->prev;
 	node->next = NULL;
 	a->last = node;
-	write(0, "rra\n", 4);
+	write(1, "rra\n", 4);
 }
