@@ -35,13 +35,12 @@ static void	parse_string(t_stack *a, char *argv)
 	free(num);
 }
 
-t_stack*	parse_arguments(int argc, char **argv)
+static void	parse_arguments(int argc, char **argv, t_stack *a, t_stack *b)
 {
-	t_stack	*tmp;
-
+	a = list_init();
+	b = list_init();
 	if (argc == 2 && !check_int(argv[1]))
-		parse_string(tmp, argv[1]);
+		parse_string(a, argv[1]);
 	else
-		parse_array(tmp, argc, argv, 1);
-	return (tmp);
+		parse_array(a, argc, argv, 1);
 }
