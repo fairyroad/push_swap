@@ -17,5 +17,5 @@ void	ft_sb(t_stack *b)
 	tmp = b->first->content;
 	b->first->content = b->first->next->content;
 	b->first->next->content = tmp;
-	write(0, "sb\n", 3);
+	write(1, "sb\n", 3);
 }
