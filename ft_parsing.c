@@ -41,7 +41,7 @@ t_stack	parse_arguments(int argc, char **argv)
 	t_stack	tmp;
 
 	if (argc == 2 && !check_int(argv[1]))
-		rparse_string(&tmp, argv[1]);
+		parse_string(&tmp, argv[1]);
 	else
 		parse_array(&tmp, argc, argv, 1);
 	return (tmp);
