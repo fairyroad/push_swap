@@ -19,7 +19,7 @@ void	rb(t_stack *b)
 
 	tmp = b->first->content;
 	node = b->first->next;
-	list_add_back(b, tmp);
+	list_add_last(b, tmp);
 	list_remove(b, b->first, free);
 	b->first = node;
 	write(1, "rb\n", 3);
