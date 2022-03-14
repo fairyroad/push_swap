@@ -24,7 +24,7 @@ int	main(int argc, char **argv)
 	{
 		if (!check_sorted(&copy))
 		{
-			normalize_stack(a);
+			format_stack(a);
 			if (a->size > 5)
 				sort_bigsize(a, b);
 			else
