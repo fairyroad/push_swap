@@ -28,7 +28,7 @@ SOURCES = operations/ft_pa.c \
        utils/list_remove.c \
        utils/list_clear.c \
        check_argument.c \
-       ft_normalize.c \
+       ft_format.c \
        ft_parsing.c \
        ft_sort.c \
        ft_tab.c \
