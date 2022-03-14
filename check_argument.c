@@ -44,6 +44,7 @@ int     check_duplicate(t_tab *tab)
         {
             if (tab->v[i] == tab->v[j])
                 return (0);
+	    j++;
         }
         i++;
     }
