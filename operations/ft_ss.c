@@ -23,5 +23,5 @@ void	ft_ss(t_stack *a, t_stack *b)
 	b->first->content = b->first->next->content;
 	a->first->next->content = tmp_a;
 	b->first->next->content = tmp_b;
-	write(0, "ss\n", 3);
+	write(1, "ss\n", 3);
 }
