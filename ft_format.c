@@ -12,7 +12,7 @@ void	format_stack(t_stack	*a)
 	tmp = a->first;
 	while (tmp != NULL)
 	{
-		index = find_index_in_tab(&copy, tmp->content);
+		index = find_index(&copy, tmp->content);
 		val = malloc(sizeof(int));
 		*val = index;
 		free(tmp->content);
