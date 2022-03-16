@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/16 22:05:29 by ygil              #+#    #+#             */
+/*   Updated: 2022/03/16 22:07:40 by ygil             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static void	sort_three(t_stack *a)
@@ -27,7 +39,7 @@ static void	sort_three(t_stack *a)
 		ft_rra(a);
 }
 
-static void	sort_fourfive(t_stack *a, t_stack *b, int pivot)
+static void	sort_fourfive(t_stack	*a, t_stack	*b, int	pivot)
 {
 	int		cnt;
 
@@ -52,7 +64,7 @@ static void	sort_fourfive(t_stack *a, t_stack *b, int pivot)
 	ft_pa(a);
 }
 
-void	sort_smallsize(t_stack *a, t_stack *b)
+void	sort_smallsize(t_stack	*a, t_stack	*b)
 {
 	int		first;
 	int		last;
@@ -62,17 +74,11 @@ void	sort_smallsize(t_stack *a, t_stack *b)
 	if (a->size == 2 && first > last)
 		ft_ra(a);
 	else if (a->size == 3)
-    {
-        sort_three(a);
-    }
+		sort_three(a);
 	else if (a->size == 4)
-	{
-        sort_fourfive(a, b, 1);
-    }
+		sort_fourfive(a, b, 1);
 	else if (a->size == 5)
-	{
-        sort_fourfive(a, b, 2);
-    }
+		sort_fourfive(a, b, 2);
 }
 
 void	sort_bigsize(t_stack *a, t_stack *b)

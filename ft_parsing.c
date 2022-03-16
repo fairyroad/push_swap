@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parsing.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/16 21:33:46 by ygil              #+#    #+#             */
+/*   Updated: 2022/03/16 21:34:43 by ygil             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static void	parse_array(t_stack *a, int argc, char **argv, int start)
 {
-	int     i;
-	int	tmp;
+	int		i;
+	int		tmp;
 
 	i = start;
 	while (i < argc)
@@ -22,7 +34,7 @@ static void	parse_array(t_stack *a, int argc, char **argv, int start)
 static void	parse_string(t_stack *a, char *argv)
 {
 	char	**num;
-	int 	i;
+	int		i;
 
 	num = ft_split(argv, ' ');
 	i = 0;

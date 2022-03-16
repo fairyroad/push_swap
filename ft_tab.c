@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tab.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/16 21:20:06 by ygil              #+#    #+#             */
+/*   Updated: 2022/03/16 21:24:50 by ygil             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_tab	convert_to_tab(t_stack *a)
 {
 	t_node	*tmp;
 	t_tab	tab;
-	int	i;
+	int		i;
 
 	i = 0;
-	tab.v = (int *) malloc(a->size * sizeof(int));
+	tab.v = (int *)malloc(a->size * sizeof(int));
 	tab.size = a->size;
 	tmp = a->first;
 	while (tmp != NULL)
@@ -20,7 +32,7 @@ t_tab	convert_to_tab(t_stack *a)
 
 int	find_index(t_tab *tab, int val)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (i < tab->size)

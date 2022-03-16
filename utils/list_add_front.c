@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_add_front.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: ygil <ygil@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 20:48:29 by ygil              #+#    #+#             */
-/*   Updated: 2022/03/10 20:58:20 by ygil             ###   ########.fr       */
+/*   Updated: 2022/03/16 20:56:35 by ygil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,20 @@
 void	list_add_front(t_stack *a, int val)
 {
 	t_node	*node;
+	t_node	*head;
 
-	node->content = val;
-	node->next = a->first;
-	node->prev = NULL;
-	if (a->first != NULL)
+	head = a->first;
+	node = list_create_node(val);
+	if (head == NULL)
 	{
-		a->first->prev = node;
+		a->first = node;
+		a->last = node;
 	}
 	else
 	{
-		a->last = node;
+		node->next = head;
+		head->prev = node;
+		a->first = node;
 	}
-	a->first = node;
 	a->size++;
 }
