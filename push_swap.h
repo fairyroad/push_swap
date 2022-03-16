@@ -41,5 +41,7 @@ typedef struct s_tab
 }	t_tab;
 
 t_tab	convert_to_tab(t_stack	*a);
+void	list_add_front(t_stack *a, int val);
+void	list_remove(t_stack *a, t_node *node, void (*del)(void*));
 
 #endif
