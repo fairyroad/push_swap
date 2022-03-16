@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/03/16 22:15:33 by ygil              #+#    #+#              #
+#    Updated: 2022/03/16 22:21:44 by ygil             ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = push_swap.a
 
 CC = gcc
@@ -27,6 +39,8 @@ SOURCES = operations/ft_pa.c \
        utils/list_add_last.c \
        utils/list_remove.c \
        utils/list_clear.c \
+	   utils/list_create_node.c \
+	   utils/list_init.c \
        check_argument.c \
        ft_format.c \
        ft_parsing.c \
