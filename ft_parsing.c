@@ -6,7 +6,7 @@
 /*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 21:33:46 by ygil              #+#    #+#             */
-/*   Updated: 2022/03/16 21:34:43 by ygil             ###   ########.fr       */
+/*   Updated: 2022/03/17 18:31:15 by ygil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	parse_array(t_stack *a, int argc, char **argv, int start)
 	i = start;
 	while (i < argc)
 	{
-		if (!check_int(argv[i]))
+		if (!check_integer(argv[i]))
 		{
 			write(1, "ERROR\n", 6);
 			exit(1);
@@ -51,7 +51,7 @@ static void	parse_arguments(int argc, char **argv, t_stack *a, t_stack *b)
 {
 	a = list_init();
 	b = list_init();
-	if (argc == 2 && !check_int(argv[1]))
+	if (argc == 2 && !check_integer(argv[1]))
 		parse_string(a, argv[1]);
 	else
 		parse_array(a, argc, argv, 1);
