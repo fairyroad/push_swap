@@ -6,7 +6,7 @@
 /*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 22:05:29 by ygil              #+#    #+#             */
-/*   Updated: 2022/03/16 22:07:40 by ygil             ###   ########.fr       */
+/*   Updated: 2022/03/17 18:33:55 by ygil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,21 @@ static void	sort_three(t_stack *a)
 	second = a->first->next->content;
 	third = a->last->content;
 	if (first > second && second < third && first < third)
-		ft_sa(a);
+		sa(a);
 	else if (first > second && second > third)
 	{
-		ft_sa(a);
-		ft_rra(a);
+		sa(a);
+		rra(a);
 	}
 	else if (first < second && second > third && first < third)
 	{
-		ft_sa(a);
-		ft_ra(a);
+		sa(a);
+		ra(a);
 	}
 	else if (first > second && second < third && first > third)
-		ft_ra(a);
+		ra(a);
 	else if (first < second && second > third && first > third)
-		ft_rra(a);
+		rra(a);
 }
 
 static void	sort_fourfive(t_stack	*a, t_stack	*b, int	pivot)
@@ -48,20 +48,20 @@ static void	sort_fourfive(t_stack	*a, t_stack	*b, int	pivot)
 	{
 		if (a->first->content < pivot)
 		{
-			ft_pb(b);
+			pb(b);
 			cnt++;
 		}
 		else
-			ft_ra(a);
+			ra(a);
 	}
 	sort_three(a);
 	if (pivot > 1)
 	{
 		if (b->first->content < b->last->content)
-			ft_sb(b);
-		ft_pa(a);
+			sb(b);
+		pa(a);
 	}
-	ft_pa(a);
+	pa(a);
 }
 
 void	sort_smallsize(t_stack	*a, t_stack	*b)
@@ -72,7 +72,7 @@ void	sort_smallsize(t_stack	*a, t_stack	*b)
 	first = a->first->content;
 	last = a->last->content;
 	if (a->size == 2 && first > last)
-		ft_ra(a);
+		ra(a);
 	else if (a->size == 3)
 		sort_three(a);
 	else if (a->size == 4)
@@ -101,11 +101,11 @@ void	sort_bigsize(t_stack *a, t_stack *b)
 		{
 			top = a->first->content;
 			if (((top >> i) & 1) == 1)
-				ft_ra(a);
+				ra(a);
 			else
-				ft_pb(b);
+				pb(b);
 		}
 		while (b->first != NULL)
-			ft_pa(a);
+			pa(a);
 	}
 }
