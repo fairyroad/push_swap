@@ -6,7 +6,7 @@
 #    By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 22:15:33 by ygil              #+#    #+#              #
-#    Updated: 2022/03/17 18:38:47 by ygil             ###   ########.fr        #
+#    Updated: 2022/03/17 19:26:24 by ygil             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,9 @@ SOURCES = operations/ft_pa.c \
        utils/list_clear.c \
 	   utils/list_create_node.c \
 	   utils/list_init.c \
+	   utils/ft_strlcpy.c \
+	   utils/ft_isdigit.c \
+	   utils/ft_isspace.c \
        check_argument.c \
        ft_format.c \
        ft_parsing.c \
