@@ -6,7 +6,7 @@
 /*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 22:05:29 by ygil              #+#    #+#             */
-/*   Updated: 2022/03/17 18:35:42 by ygil             ###   ########.fr       */
+/*   Updated: 2022/03/17 18:38:03 by ygil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,9 +103,9 @@ void	sort_bigsize(t_stack *a, t_stack *b)
 			if (((top >> i) & 1) == 1)
 				ra(a);
 			else
-				pb(b);
+				pb(a, b);
 		}
 		while (b->first != NULL)
-			pa(a);
+			pa(a, b);
 	}
 }

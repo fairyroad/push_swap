@@ -6,7 +6,7 @@
 #    By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 22:15:33 by ygil              #+#    #+#              #
-#    Updated: 2022/03/16 22:21:44 by ygil             ###   ########.fr        #
+#    Updated: 2022/03/17 18:38:47 by ygil             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ SOURCES = operations/ft_pa.c \
        ft_parsing.c \
        ft_sort.c \
        ft_tab.c \
-       ft_push_swap.c
+       push_swap.c
 
 SRCS = $(SOURCES)
 
