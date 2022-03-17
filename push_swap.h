@@ -6,7 +6,7 @@
 /*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 18:23:23 by ygil              #+#    #+#             */
-/*   Updated: 2022/03/17 18:29:31 by ygil             ###   ########.fr       */
+/*   Updated: 2022/03/17 18:36:30 by ygil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	rra(t_stack *a);
 void	rrb(t_stack *b);
 void	rrr(t_stack *a, t_stack *b);
 void	sa(t_stack *a);
-void	ft_sb(t_stack *b);
-void	ft_ss(t_stack *a, t_stack *b);
+void	sb(t_stack *b);
+void	ss(t_stack *a, t_stack *b);
 
 #endif

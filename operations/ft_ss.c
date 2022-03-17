@@ -6,13 +6,13 @@
 /*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 19:46:16 by ygil              #+#    #+#             */
-/*   Updated: 2022/03/10 19:48:29 by ygil             ###   ########.fr       */
+/*   Updated: 2022/03/17 18:36:49 by ygil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_ss(t_stack *a, t_stack *b)
+void	ss(t_stack *a, t_stack *b)
 {
 	int		tmp_a;
 	int		tmp_b;

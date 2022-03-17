@@ -6,7 +6,7 @@
 /*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 22:05:29 by ygil              #+#    #+#             */
-/*   Updated: 2022/03/17 18:33:55 by ygil             ###   ########.fr       */
+/*   Updated: 2022/03/17 18:35:42 by ygil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static void	sort_fourfive(t_stack	*a, t_stack	*b, int	pivot)
 	{
 		if (a->first->content < pivot)
 		{
-			pb(b);
+			pb(a, b);
 			cnt++;
 		}
 		else
@@ -59,9 +59,9 @@ static void	sort_fourfive(t_stack	*a, t_stack	*b, int	pivot)
 	{
 		if (b->first->content < b->last->content)
 			sb(b);
-		pa(a);
+		pa(a, b);
 	}
-	pa(a);
+	pa(a, b);
 }
 
 void	sort_smallsize(t_stack	*a, t_stack	*b)
