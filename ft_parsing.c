@@ -6,7 +6,7 @@
 /*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 21:33:46 by ygil              #+#    #+#             */
-/*   Updated: 2022/03/17 18:31:15 by ygil             ###   ########.fr       */
+/*   Updated: 2022/03/17 19:02:02 by ygil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static void	parse_string(t_stack *a, char *argv)
 	free(num);
 }
 
-static void	parse_arguments(int argc, char **argv, t_stack *a, t_stack *b)
+void	parse_arguments(int argc, char **argv, t_stack *a, t_stack *b)
 {
 	a = list_init();
 	b = list_init();

@@ -6,7 +6,7 @@
 /*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 18:23:23 by ygil              #+#    #+#             */
-/*   Updated: 2022/03/17 18:45:35 by ygil             ###   ########.fr       */
+/*   Updated: 2022/03/17 19:02:25 by ygil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,6 @@ void		rrr(t_stack *a, t_stack *b);
 void		sa(t_stack *a);
 void		sb(t_stack *b);
 void		ss(t_stack *a, t_stack *b);
-static void	parse_arguments(int argc, char **argv, t_stack *a, t_stack *b);
+void		parse_arguments(int argc, char **argv, t_stack *a, t_stack *b);
 
 #endif
