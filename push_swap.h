@@ -6,7 +6,7 @@
 /*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 18:23:23 by ygil              #+#    #+#             */
-/*   Updated: 2022/03/17 17:22:56 by ygil             ###   ########.fr       */
+/*   Updated: 2022/03/17 17:36:36 by ygil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void	sort_bigsize(t_stack *a, t_stack *b);
 int		find_index(t_tab *tab, int val);
 void	sort_tab(t_tab *tab);
 
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 int		ft_atoi(const char *str);
 char	**ft_split(char const *str, char c);
 void	list_add_front(t_stack *a, int val);
