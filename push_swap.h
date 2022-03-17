@@ -6,7 +6,7 @@
 /*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 18:23:23 by ygil              #+#    #+#             */
-/*   Updated: 2022/03/17 19:02:25 by ygil             ###   ########.fr       */
+/*   Updated: 2022/03/17 19:04:48 by ygil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void		list_add_front(t_stack *a, int val);
 void		list_add_last(t_stack *a, int content);
 void		list_remove(t_stack *a, t_node *node, void (*del)(void*));
 void		list_clear(t_stack *a, void (*del)(void*));
-t_node		*list_create_node(void *content);
+t_node		*list_create_node(int content);
 t_stack		*list_init(void);
 
 void		pa(t_stack *a, t_stack *b);
