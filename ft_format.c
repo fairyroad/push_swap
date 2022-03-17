@@ -6,7 +6,7 @@
 /*   By: ygil <ygil@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 21:55:09 by ygil              #+#    #+#             */
-/*   Updated: 2022/03/16 21:55:12 by ygil             ###   ########.fr       */
+/*   Updated: 2022/03/17 19:07:41 by ygil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ void	format_stack(t_stack	*a)
 		index = find_index(&copy, tmp->content);
 		val = malloc(sizeof(int));
 		*val = index;
-		free(tmp->content);
-		tmp->content = val;
+		free((void *)tmp->content);
+		tmp->content = *val;
 		tmp = tmp->next;
 	}
 	free(copy.v);
