@@ -44,4 +44,16 @@ t_tab	convert_to_tab(t_stack	*a);
 void	list_add_front(t_stack *a, int val);
 void	list_remove(t_stack *a, t_node *node, void (*del)(void*));
 
+void	pa(t_stack *a, t_stack *b);
+void	pb(t_stack *a, t_stack *b);
+void	ra(t_stack *a);
+void	rb(t_stack *b);
+void	rr(t_stack *a, t_stack *b);
+void	rra(t_stack *a);
+void	rrb(t_stack *b);
+void	rrr(t_stack *a, t_stack *b);
+void	sa(t_stack *a);
+void	ft_sb(t_stack *b);
+void	ft_ss(t_stack *a, t_stack *b);
+
 #endif
