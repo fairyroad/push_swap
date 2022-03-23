@@ -69,6 +69,6 @@ fclean : clean
 re : fclean all
 
 $(NAME) : $(OBJS)
-	$(AR) $(ARFLAG) $@ $^
+	$(AR) $(ARFLAGS) $@ $^
 
 .PHONY : all clean fclean re
