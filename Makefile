@@ -17,7 +17,7 @@ NAME = push_swap.a
 RM = rm -f
 
 AR = ar
-ARFLAGS = crs
+ARFLAGS = cr
 
 INCLUDES = ./push_swap.h
 
