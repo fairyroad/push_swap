@@ -12,28 +12,34 @@
 
 #include "push_swap.h"
 
-int	check_integer(char	*str)
+int	check_integer(char *str)
 {
-	int		num;
-	size_t	j;
+	long	sign;
+	long	result;
 	size_t	i;
 
 	i = 0;
-	num = 0;
-	j = 0;
-	while (ft_isspace(str[i]))
+	sign = 1;
+	result = 0;
+	while (str[i] != '\0' && ft_isspace(str[i]))
 		i++;
+	if (str[i] == '-')
+		sign = -1;
 	if (str[i] == '+' || str[i] == '-')
 		i++;
-	while (ft_isdigit(str[i]))
+	if (!ft_isdigit(str[i]))
+		return (0);
+	while (str[i] != '\0')
 	{
-		j++;
-		if ((num * 10 + (str[i] - '0' )) / 10 != num)
+		if (!ft_isdigit(str[i]))
 			return (0);
-		num = num * 10 + (str[i] - '0');
+		result = result * 10 + (str[i] - '0');
+		if ((result > 2147483647 && sign == 1)
+			|| (result > 2147483648 && sign == -1))
+			return (0);
 		i++;
 	}
-	return (!str[i] && j);
+	return (sign * result);
 }
 
 int	check_duplicate(t_tab	*tab)
