@@ -10,10 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = push_swap.a
-
 CC = gcc
 CFLAG = -Wall -Wextra -Werror
+NAME = push_swap.a
 
 RM = rm -f
 
@@ -22,7 +21,7 @@ ARFLAGS = crs
 
 INCLUDES = ./push_swap.h
 
-SOURCES = operations/ft_pa.c \
+SRCS = operations/ft_pa.c \
        operations/ft_pb.c \
        operations/ft_ra.c \
        operations/ft_rb.c \
@@ -51,14 +50,15 @@ SOURCES = operations/ft_pa.c \
        ft_tab.c \
        push_swap.c
 
-SRCS = $(SOURCES)
-
 OBJS = $(SRCS:.c=.o)
 
 all : $(NAME)
 
-%.o : %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+.c.o: $(SRCS)
+		$(CC) $(CFLAGS) -c -o $@ $<
+
+$(NAME) : $(OBJS)
+	$(AR) $(ARFLAGS) $@ $^
 
 clean :
 	$(RM) $(OBJS)
@@ -67,8 +67,5 @@ fclean : clean
 	$(RM) $(NAME)
 
 re : fclean all
-
-$(NAME) : $(OBJS)
-	$(AR) $(ARFLAGS) $@ $^
 
 .PHONY : all clean fclean re
